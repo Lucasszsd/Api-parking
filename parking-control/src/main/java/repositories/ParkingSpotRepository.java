@@ -1,5 +1,16 @@
 package repositories;
 
-public interface ParkingSpotRepository {
+import java.util.UUID;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import models.ParkingSpotModel;
+
+public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID>{
+	
+    boolean existsByLicensePlateCar(String licensePlateCar);
+    boolean existsByParkingSpotNumber(String parkingSpotNumber);
+    boolean existsByApartmentAndBlock(String apartment, String block);
+	
+	
 }
