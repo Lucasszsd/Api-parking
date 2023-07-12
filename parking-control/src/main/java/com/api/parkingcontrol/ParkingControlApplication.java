@@ -13,6 +13,6 @@ public class ParkingControlApplication {
 
     @GetMapping("/")
     public String index() {
-        return "Olá Mundo";
+     return "Olá Mundo";
     }
 }
